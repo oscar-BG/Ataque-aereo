@@ -1,0 +1,11 @@
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.exe
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.deps.json
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.runtimeconfig.json
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.runtimeconfig.dev.json
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.dll
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\bin\Debug\netcoreapp3.1\AtaqueAereo.pdb
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\obj\Debug\netcoreapp3.1\AtaqueAereo.csprojAssemblyReference.cache
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\obj\Debug\netcoreapp3.1\AtaqueAereo.AssemblyInfoInputs.cache
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\obj\Debug\netcoreapp3.1\AtaqueAereo.AssemblyInfo.cs
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\obj\Debug\netcoreapp3.1\AtaqueAereo.dll
+C:\git-Juego3\JuegoConsola3\AtaqueAereo\obj\Debug\netcoreapp3.1\AtaqueAereo.pdb
