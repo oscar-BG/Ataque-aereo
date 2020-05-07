@@ -20,10 +20,13 @@ namespace AtaqueAereo
         {
             int x = 5;
             int y = 10;
+            int xAtac;
+            int yAtac;
             
             ConsoleKeyInfo keyInfo;
             do
             {
+                
                 Console.SetCursorPosition(x, y);
                 dibuja_Avion();
                 keyInfo = Console.ReadKey();
@@ -40,6 +43,7 @@ namespace AtaqueAereo
                     {
                         y += 1;
                     }
+                    
                     break;
                 }
 
@@ -85,6 +89,25 @@ namespace AtaqueAereo
                     break;
                 }
                 
+                if (keyInfo.Key == ConsoleKey.D)
+                {
+                    int posicionActual = x + 2;
+                    int posicionRecorrer = 60 - posicionActual;
+              
+                    for (int i = 1; i < posicionRecorrer; i++)
+                    {
+
+                        Console.SetCursorPosition(posicionActual+i, y);
+                        Console.Write(">");
+                        for (int t = 0; t < 1000000; t++)
+                        {
+
+                        }
+                        
+                    }
+                    
+                }
+
             } while (true);
             
         } 

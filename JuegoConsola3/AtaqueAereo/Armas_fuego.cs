@@ -6,5 +6,6 @@ namespace AtaqueAereo
 {
     class Armas_fuego
     {
+
     }
 }
