@@ -6,10 +6,10 @@ namespace AtaqueAereo
 {
     class skin_Avion
     {
-        int xAtac = 0;
-        int yAtac = 0;
-        int x = 5;
-        int y = 10;
+        Enemigos enemigos = new Enemigos();
+        public int x = 5;
+        public int y = 10;
+        private int incremento = 0;
         private void dibuja_Avion()
         {
             Console.ForegroundColor = ConsoleColor.Black;
@@ -25,12 +25,14 @@ namespace AtaqueAereo
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("+");
         }
-        public void avion()
+
+        public void  avion()
         {
             ConsoleKeyInfo keyInfo;
 
             do
             {
+                incremento = incremento + 1;
                 Console.SetCursorPosition(x, y);
                 dibuja_Avion();
                 keyInfo = Console.ReadKey();
@@ -92,9 +94,12 @@ namespace AtaqueAereo
                     }
                     break;
                 }
+                
 
                 if (keyInfo.Key == ConsoleKey.D)
                 {
+                 
+                    
                     int posicionActual = x + 2;
                     int posicionRecorrer = 60 - posicionActual;
                     
@@ -102,6 +107,7 @@ namespace AtaqueAereo
                     {
 
                         Console.SetCursorPosition(posicionActual+i, y);
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write(">");
                         
                         for (int t = 0; t < 1000000; t++)
@@ -120,17 +126,11 @@ namespace AtaqueAereo
                         }
                     }
                 }
+               
+                enemigos.enemigos(incremento);
             } while (true);
             
         }
         
-        public int get_AtacarX()
-        {
-            return xAtac;
-        }
-        public int get_AtacarY()
-        {
-            return yAtac;
-        }
     }
 }
