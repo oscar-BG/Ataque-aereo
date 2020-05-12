@@ -98,8 +98,6 @@ namespace AtaqueAereo
 
                 if (keyInfo.Key == ConsoleKey.D)
                 {
-                 
-                    
                     int posicionActual = x + 2;
                     int posicionRecorrer = 60 - posicionActual;
                     
@@ -127,7 +125,7 @@ namespace AtaqueAereo
                     }
                 }
                
-                enemigos.enemigos(incremento);
+                enemigos.enemigos=incremento;
             } while (true);
             
         }

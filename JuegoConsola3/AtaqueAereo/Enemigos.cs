@@ -9,6 +9,7 @@ namespace AtaqueAereo
         private int c;
         private int longitud;
         
+        
         private void sking_enemigo()
         {
             Console.ForegroundColor = ConsoleColor.Black;
@@ -19,46 +20,37 @@ namespace AtaqueAereo
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("X");
         }
-        private void colocarEnemigo()
+        
+        public int enemigos
         {
-
-        }
-        public void enemigos(int suma)
-        {
-            Random random = new Random();
-            c = suma;
-            longitud = 60 - c;
-            int longBlanco = longitud + 1;
-            
-            int y = random.Next(1,20);
-            if (longitud > 0) 
+            set
             {
-                Console.SetCursorPosition(longitud, y);
-                sking_enemigo();
-                for (int a = 0; a < 100000; a++)
+                int suma = value;
+                c = suma;
+                longitud = 60 - c;
+                int longBlanco = longitud + 1;
+                if (longitud > 0)
                 {
+                    Console.SetCursorPosition(longitud, 5);
+                    sking_enemigo();
+                    for (int a = 0; a < 100000; a++)
+                    {
 
+                    }
+                    Console.SetCursorPosition(longBlanco, 5);
+                    campoBlanco();
+                    if (longitud == 1)
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.SetCursorPosition(1, 5);
+                        Console.WriteLine("+");
+                    }
                 }
-                Console.SetCursorPosition(longBlanco, y);
-                campoBlanco();
-
-                Console.SetCursorPosition(longitud, 10);
-                sking_enemigo();
-                for (int a = 0; a < 100000; a++)
-                {
-
-                }
-                Console.SetCursorPosition(longBlanco, 10);
-                campoBlanco();
-
-                Console.SetCursorPosition(longitud, 17);
-                sking_enemigo();
-                for (int a = 0; a < 100000; a++)
-                {
-
-                }
-                Console.SetCursorPosition(longBlanco, 17);
-                campoBlanco();
+            }
+            
+            get
+            {
+                return longitud;
             }
         }
     }
