@@ -6,8 +6,14 @@ namespace AtaqueAereo
 {
     class Marco
     {
-        public void dibujar_Marco()
+        public Marco()
         {
+            Console.Title = "Ataque aereo";
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.SetWindowSize(61, 21);
+            Console.ForegroundColor = ConsoleColor.Black;
+
             Console.SetCursorPosition(0, 0);
             Console.Write("╔");
             

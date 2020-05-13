@@ -10,6 +10,10 @@ namespace AtaqueAereo
         public int x = 5;
         public int y = 10;
         private int incremento = 0;
+        private int incremento2 = 0;
+        private int uno = 1;
+        private int uno2 = 1;
+        
         private void dibuja_Avion()
         {
             Console.ForegroundColor = ConsoleColor.Black;
@@ -32,7 +36,8 @@ namespace AtaqueAereo
 
             do
             {
-                incremento = incremento + 1;
+                incremento = incremento + uno;
+                incremento2 = incremento2 + uno2;
                 Console.SetCursorPosition(x, y);
                 dibuja_Avion();
                 keyInfo = Console.ReadKey();
@@ -98,36 +103,54 @@ namespace AtaqueAereo
 
                 if (keyInfo.Key == ConsoleKey.D)
                 {
-                    int posicionActual = x + 2;
-                    int posicionRecorrer = 60 - posicionActual;
-                    
-                    for (int i = 1; i < posicionRecorrer; i++)
-                    {
-
-                        Console.SetCursorPosition(posicionActual+i, y);
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(">");
-                        
-                        for (int t = 0; t < 1000000; t++)
-                        {
-
-                        }
-                        
-                    }
-                    for (int i = 0; i < posicionRecorrer; i++)
-                    {
-                        Console.SetCursorPosition(posicionActual + i, y);
-                        campoBlancoFuego();
-                        for (int a = 0; a < 10000; a++)
-                        {
-
-                        }
-                    }
+                    teclaD();
                 }
                
-                enemigos.enemigos=incremento;
+                enemigos.enemigos=incremento; //Uso de Set de la clase Enemigos
+                enemigos.enemigos2 = incremento2;
             } while (true);
             
+        }
+
+        private void teclaD()
+        {
+            int posicionActual = x + 2;
+            int posicionRecorrer = 60 - posicionActual;
+            int recibirlog;
+            int recibirlog2;
+            recibirlog = enemigos.enemigos; //Hacemos uso de get de la clase Enemigos
+            recibirlog2 = enemigos.enemigos2;
+            for (int i = 1; i < posicionRecorrer; i++)
+            {
+
+                Console.SetCursorPosition(posicionActual + i, y);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(">");
+                if (posicionActual + i == recibirlog && y == 5)
+                {
+                    incremento = 0;
+                    uno = 0;
+                }
+                else if (posicionActual + i == recibirlog2 && y == 10)
+                {
+                    incremento2 = 0;
+                    uno2 = 0;
+                }
+                for (int t = 0; t < 1000000; t++)
+                {
+
+                }
+
+            }
+            for (int i = 0; i < posicionRecorrer; i++)
+            {
+                Console.SetCursorPosition(posicionActual + i, y);
+                campoBlancoFuego();
+                for (int a = 0; a < 10000; a++)
+                {
+
+                }
+            }
         }
         
     }

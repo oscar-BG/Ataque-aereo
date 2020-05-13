@@ -8,7 +8,7 @@ namespace AtaqueAereo
     {
         private int c;
         private int longitud;
-        
+        private int suma;
         
         private void sking_enemigo()
         {
@@ -25,29 +25,66 @@ namespace AtaqueAereo
         {
             set
             {
-                int suma = value;
-                c = suma;
-                longitud = 60 - c;
-                int longBlanco = longitud + 1;
-                if (longitud > 0)
+                suma = value;
+                if (suma > 0)
                 {
-                    Console.SetCursorPosition(longitud, 5);
-                    sking_enemigo();
-                    for (int a = 0; a < 100000; a++)
+                    c = suma;
+                    longitud = 60 - c;
+                    int longBlanco = longitud + 1;
+                    if (longitud > 0)
                     {
+                        Console.SetCursorPosition(longitud, 5);
+                        sking_enemigo();
+                        for (int a = 0; a < 100000; a++)
+                        {
 
-                    }
-                    Console.SetCursorPosition(longBlanco, 5);
-                    campoBlanco();
-                    if (longitud == 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.White;
-                        Console.SetCursorPosition(1, 5);
-                        Console.WriteLine("+");
+                        }
+                        Console.SetCursorPosition(longBlanco, 5);
+                        campoBlanco();
+                        if (longitud == 1)
+                        {
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.SetCursorPosition(1, 5);
+                            Console.WriteLine("+");
+                        }
                     }
                 }
             }
-            
+            get
+            {
+                return longitud;
+            }
+        }
+
+        public int enemigos2
+        {
+            set
+            {
+                suma = value;
+                if (suma > 0)
+                {
+                    c = suma;
+                    longitud = 60 - c;
+                    int longBlanco = longitud + 1;
+                    if (longitud > 0)
+                    {
+                        Console.SetCursorPosition(longitud, 10);
+                        sking_enemigo();
+                        for (int a = 0; a < 100000; a++)
+                        {
+
+                        }
+                        Console.SetCursorPosition(longBlanco, 10);
+                        campoBlanco();
+                        if (longitud == 1)
+                        {
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.SetCursorPosition(1, 10);
+                            Console.WriteLine("+");
+                        }
+                    }
+                }
+            }
             get
             {
                 return longitud;
