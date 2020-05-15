@@ -11,8 +11,16 @@ namespace AtaqueAereo
         public int y = 10;
         private int incremento = 0;
         private int incremento2 = 0;
+        private int incremento3 = 0;
+        private int incremento4 = 0;
+        private int incremento5 = 0;
+        private int incremento6 = 0;
         private int uno = 1;
         private int uno2 = 1;
+        private int uno3=1;
+        private int uno4 = 1;
+        private int uno5 = 1;
+        private int uno6 = 1;
         
         private void dibuja_Avion()
         {
@@ -38,6 +46,10 @@ namespace AtaqueAereo
             {
                 incremento = incremento + uno;
                 incremento2 = incremento2 + uno2;
+                incremento3 = incremento3 + uno3;
+                incremento4 = incremento4 + uno4;
+                incremento5 = incremento5 + uno5;
+                
                 Console.SetCursorPosition(x, y);
                 dibuja_Avion();
                 keyInfo = Console.ReadKey();
@@ -108,6 +120,15 @@ namespace AtaqueAereo
                
                 enemigos.enemigos=incremento; //Uso de Set de la clase Enemigos
                 enemigos.enemigos2 = incremento2;
+                enemigos.enemigos3 = incremento3;
+                enemigos.enemigos4(incremento4,17);
+                enemigos.enemigos4(incremento5, 3);
+                if (incremento==0)
+                {
+                    incremento6 = incremento6 + uno6;
+                    enemigos.enemigos4(incremento6,4);
+                }
+                
             } while (true);
             
         }
@@ -118,8 +139,12 @@ namespace AtaqueAereo
             int posicionRecorrer = 60 - posicionActual;
             int recibirlog;
             int recibirlog2;
+            int recibirlog3;
+            int recibirlog4;
             recibirlog = enemigos.enemigos; //Hacemos uso de get de la clase Enemigos
             recibirlog2 = enemigos.enemigos2;
+            recibirlog3 = enemigos.enemigos3;
+            recibirlog4 = enemigos.enemigos;
             for (int i = 1; i < posicionRecorrer; i++)
             {
 
@@ -136,9 +161,29 @@ namespace AtaqueAereo
                     incremento2 = 0;
                     uno2 = 0;
                 }
+                else if (posicionActual+i==recibirlog3&& y==8)
+                {
+                    incremento3 = 0;
+                    uno3 = 0;
+                }
+                else if(posicionActual+i==recibirlog4 && y==17)
+                {
+                    incremento4 = 0;
+                    uno4 = 0;
+                }
+                else if(posicionActual+i==recibirlog4 && y==3)
+                {
+                    incremento5 = 0;
+                    uno5 = 0;
+                }
+                else if(posicionActual+i == recibirlog4 && y==4)
+                {
+                    incremento6 = 0;
+                    uno6 = 0;
+                }
                 for (int t = 0; t < 1000000; t++)
                 {
-
+                    
                 }
 
             }
