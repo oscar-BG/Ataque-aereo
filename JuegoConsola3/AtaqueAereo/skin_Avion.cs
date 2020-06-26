@@ -15,12 +15,14 @@ namespace AtaqueAereo
         private int incremento4 = 0;
         private int incremento5 = 0;
         private int incremento6 = 0;
+        private int incremento7 = 0;
         private int uno = 1;
         private int uno2 = 1;
-        private int uno3=1;
+        private int uno3 = 1;
         private int uno4 = 1;
         private int uno5 = 1;
         private int uno6 = 1;
+        private int uno7 = 1;
         
         private void dibuja_Avion()
         {
@@ -40,10 +42,12 @@ namespace AtaqueAereo
 
         public void  avion()
         {
+            
             ConsoleKeyInfo keyInfo;
 
             do
             {
+                
                 incremento = incremento + uno;
                 incremento2 = incremento2 + uno2;
                 incremento3 = incremento3 + uno3;
@@ -123,18 +127,21 @@ namespace AtaqueAereo
                 enemigos.enemigos3 = incremento3;
                 enemigos.enemigos4(incremento4,17);
                 enemigos.enemigos4(incremento5, 3);
-                if (incremento==0)
+                if (incremento==0 || incremento2 == 0)
                 {
                     incremento6 = incremento6 + uno6;
                     enemigos.enemigos4(incremento6,4);
+                    incremento7 = incremento7 + uno7;
+                    enemigos.enemigos4(incremento7, 9);
+                    
                 }
-                
             } while (true);
             
         }
 
         private void teclaD()
         {
+         
             int posicionActual = x + 2;
             int posicionRecorrer = 60 - posicionActual;
             int recibirlog;
@@ -181,12 +188,19 @@ namespace AtaqueAereo
                     incremento6 = 0;
                     uno6 = 0;
                 }
+                else if(posicionActual+i == recibirlog4 && y==9)
+                {
+                    incremento7 = 0;
+                    uno7 = 0;
+                }
+                
                 for (int t = 0; t < 1000000; t++)
                 {
                     
                 }
 
             }
+            
             for (int i = 0; i < posicionRecorrer; i++)
             {
                 Console.SetCursorPosition(posicionActual + i, y);
@@ -196,7 +210,7 @@ namespace AtaqueAereo
 
                 }
             }
-        }
-        
+
+        }        
     }
 }
