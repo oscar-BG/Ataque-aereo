@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\AtaqueAereo.csproj",
+      "projectUniqueName": "B:\\Programacion\\SCharp\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\AtaqueAereo.csproj",
       "projectName": "AtaqueAereo",
-      "projectPath": "C:\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\AtaqueAereo.csproj",
+      "projectPath": "B:\\Programacion\\SCharp\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\AtaqueAereo.csproj",
       "packagesPath": "C:\\Users\\oscar\\.nuget\\packages\\",
-      "outputPath": "C:\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\obj\\",
+      "outputPath": "B:\\Programacion\\SCharp\\git-Juego3\\JuegoConsola3\\AtaqueAereo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
